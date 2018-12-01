@@ -27,6 +27,7 @@ message AthletesMessage {
         string state = 7;
         string race = 8;
         repeated string additional_fields = 9;
+        string bib = 10;
     }
 }
 
