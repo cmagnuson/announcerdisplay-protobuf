@@ -27,6 +27,7 @@ message MtecCredentials {
     string event_hash = 2;
     int64 api_key = 3;
     string api_auth_key = 4;
+    string url_root = 5;
 }
 
 message RaceConfiguration {
