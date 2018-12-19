@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package com.mtecresults.announcerdisplay.domain.proto;
+
+option java_package = "com.mtecresults.announcerdisplay.messagehandling";
+
+service CommandHandler {
+    rpc HandleCommand (CommandMessage) returns (CommandHandledAcknowledgement) {}
+}
+
+message CommandMessage {
+    oneof command {
+        SimpleCommand simpleCommand = 1;
+    }
+}
+
+enum SimpleCommand {
+    UNKNOWN = 0;
+    CLEAR_DISPLAY = 1;
+    CLEAR_HISTORY = 2;
+    CLEAR_ATHLETES = 3;
+    CLEAR_DISPLAY_AND_HISTORY = 4;
+}
+
+message CommandHandledAcknowledgement {
+}
