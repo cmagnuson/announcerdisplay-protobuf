@@ -11,6 +11,7 @@ service CommandHandler {
 message CommandMessage {
     oneof command {
         SimpleCommand simpleCommand = 1;
+        ShowTextMessageCommand showTextMessageCommand = 2;
     }
 }
 
@@ -20,6 +21,11 @@ enum SimpleCommand {
     CLEAR_HISTORY = 2;
     CLEAR_ATHLETES = 3;
     CLEAR_DISPLAY_AND_HISTORY = 4;
+}
+
+message ShowTextMessageCommand {
+    string text = 1;
+    int32 display_time_ms = 2;
 }
 
 message CommandHandledAcknowledgement {
