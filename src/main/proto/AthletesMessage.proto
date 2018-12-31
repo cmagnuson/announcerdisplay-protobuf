@@ -32,5 +32,6 @@ message AthletesMessage {
 }
 
 message AthletesHandledAcknowledgement {
-
+    int32 numberHandled = 1;
+    int32 numberInLoaded = 2;
 }
