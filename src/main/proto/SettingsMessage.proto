@@ -20,6 +20,7 @@ message SettingsMessage {
     map<string, RaceConfiguration> race_settings = 6;
     bool merge_always_overwrite = 7;
     bool hide_unknown_tags = 8;
+    int32 fade_time_seconds = 9;
 }
 
 message MtecCredentials {
